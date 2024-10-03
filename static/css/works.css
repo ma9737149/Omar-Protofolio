@@ -1,0 +1,92 @@
+:root{
+    --box-bg-color : #b74545;
+    --font-color : #171717
+}
+
+.dark{
+    --box-bg-color : #171717;
+    --font-color : #b74545;
+}
+
+.works{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.works h1  , .tools{
+    font-family: font-name;
+}
+
+.tools{
+    padding: 15px;
+}
+
+
+
+
+
+
+.box{
+    background: var(--box-bg-color);
+    color: var(--font-color);
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+
+
+
+
+.container.dark .box{
+    border: 3px solid var(--font-color);
+    border-radius: 17px;
+}
+
+
+.box h3.description , .box .footer p{
+    background: white;
+}
+
+.box img{
+    border-radius: 27px;
+    width: 670px;
+    height: fit-content;
+    padding: 15px;
+    max-width: 100%;
+}
+
+
+
+.tools span , .soon span{
+    font-family: 'Rubik' , sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.soon{
+    font-family: 'Rubik' , sans-serif;
+    font-size: 25px;
+    font-weight: bold;   
+    text-align: center;
+}
+
+
+
+.tools:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+
+@media (max-width : 749px) {
+    .box{
+        width: 90vw;
+    }
+}

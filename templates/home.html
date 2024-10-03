@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="profile">
+    <img src="{{ url_for('static' , filename = 'assets/Imgs/logo_discord.gif') }}" alt="">
+    <div class="name">Omar Ahmed</div>
+    <div class="skills">I'm Graphic Designer , 3D Artist</div>
+    <div class="social-media-icons">
+        <a class="behance-icon icon" href="https://www.behance.net/omark6647">
+            <i class="fa-brands fa-behance"></i>
+        </a>
+        <a class="twitter-icon icon" href="https://x.com/6647Dark?t=F7IoHjsOjmDuf-jtyL7NhQ&s=09">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+
+        <a class="instgram-icon icon" href="https://www.instagram.com/omar_ahmed6647?igsh=eG1xNnVvYWdiMXh3">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a class="discord-icon icon" href="https://discord.com/users/1137157616804573376">
+            <i class="fa-brands fa-discord"></i>
+        </a>
+
+    </div>
+</div>
+
+{% endblock %}

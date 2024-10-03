@@ -1,0 +1,19 @@
+.profile{
+    height: calc( 100vh - 94px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p{
+    overflow: visible;
+    width: 70vw;
+    font-size: 18px;
+}
+
+.profile img{
+    transform: translateY(-10px);
+}
+
+

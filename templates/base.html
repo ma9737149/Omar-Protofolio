@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if name %}
+    <title>{{name}} | OA</title>
+    {% endif %}
+    <link rel="icon" href="assets/Imgs/Final_logo_3.png">
+
+
+    {% if css_file %}
+        <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/' + css_file) }}">
+        <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/base.css') }}">
+    {% endif %}
+
+    {% if has_emojis %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% endif %}
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <div class="logo">
+                    <a href="{{url_for('home_page')}}">
+                        <img src="{{ url_for('static' , filename = 'assets/Imgs/Final_logo_3.png') }}" alt="">
+                    </a>
+                    <i class="fa-regular fa-moon icon"></i>
+
+                </div>
+                <ul class="links">
+                    <a href="{{ url_for('about_page') }}" class="about_page">
+                        <li>About</li>
+                    </a>
+                    <a href="{{ url_for('works_page') }}" class="work_page">
+                        <li>Works</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        {% block body %}
+        {% endblock %}
+    </div>
+
+
+    <script src="{{ url_for('static' , filename = 'main.js') }}"></script>
+</body>
+</html>
